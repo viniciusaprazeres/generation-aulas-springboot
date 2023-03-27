@@ -36,6 +36,10 @@ public class Game {
     @JsonIgnoreProperties("game")
     private Genero genero;
 
+    @ManyToOne
+    @JsonIgnoreProperties("game")
+    private Usuario usuario;
+
     public Long getId() {
         return id;
     }
@@ -90,5 +94,13 @@ public class Game {
 
     public void setGenero(Genero genero) {
         this.genero = genero;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
